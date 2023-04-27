@@ -20,13 +20,8 @@ let partsIndex = [3, 4, 4]
 focus = 0
 
 elements[focus].src = `./images/${parts[focus]}${partsIndex[focus]}.png`
-  elements[focus].classList.add('focussed')
-  for (let index = 0; index < elements.length; index++) {
-    if(index === focus) {
-      continue
-    }
-    elements[index].classList.remove('focussed')
-  }
+elements[focus].classList.add('focussed')
+  
 
 
 function keypress(event) {
@@ -59,11 +54,6 @@ function keypress(event) {
   }
 
   elements[focus].src = `./images/${parts[focus]}${partsIndex[focus]}.png`
+  elements.forEach(element => element.classList.remove('focussed'))
   elements[focus].classList.add('focussed')
-  for (let index = 0; index < elements.length; index++) {
-    if(index === focus) {
-      continue
-    }
-    elements[index].classList.remove('focussed')
-  }
 }
