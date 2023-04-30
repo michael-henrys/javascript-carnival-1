@@ -10,7 +10,6 @@ let elements = [
   document.getElementById('shoes')
 ]
 
-
 document.body.onkeydown = keypress
 
 let parts = ['head', 'body', 'shoes']
@@ -21,8 +20,6 @@ focus = 0
 
 elements[focus].src = `./images/${parts[focus]}${partsIndex[focus]}.png`
 elements[focus].classList.add('focussed')
-  
-
 
 function keypress(event) {
   event.preventDefault()
